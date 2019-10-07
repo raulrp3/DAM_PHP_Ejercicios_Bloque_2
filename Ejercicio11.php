@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ejercicio 9</title>
+    <title>Ejercicio 11</title>
 </head>
 <body>
     <?php
-        $url = 'www.dominio.com/htdocs/pagina.php';
-        preg_match('#\/[a-zA-z0-9]*\.[a-z]{3,4}#', $url, $matches);
-        if (count($matches) != 0){
-            echo $matches[0];
-        }
+        $string = 'Escuela Estech, Linares';
+        $newString = 'de Tecnologías';
+        $array = explode(' ', $string);
+        array_splice($array, 1, 0, $newString);
+        echo implode(' ', $array);
     ?>
 </body>
 </html>

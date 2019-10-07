@@ -9,7 +9,10 @@
 <body>
     <?php
         $url = 'https://www.mitienda.com/product-category/iphone?orderby=popularity';
-        var_dump(preg_split('/\/[a-zA-Z]+\?/', $url));
+        preg_match('#\/[a-zA-z0-9]*\?#', $url, $matches);
+        if (count($matches) != 0){
+            echo $matches[0];
+        }
     ?>
 </body>
 </html>
