@@ -10,7 +10,7 @@
     <?php
         $url = 'www.dominio.com/htdocs/pagina.php';
         preg_match('#\/[a-zA-z0-9]*\.[a-z]{3,4}#', $url, $matches);
-        if (count($matches) != 0){
+        if (!empty($matches)){
             echo $matches[0];
         }
     ?>

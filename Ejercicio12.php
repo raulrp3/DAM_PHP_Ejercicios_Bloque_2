@@ -12,7 +12,7 @@
         preg_match('#[a-z]{3,5}:#', $url, $scheme);
         preg_match('#www.[a-zA-z0-9]+.[a-z]{3}#', $url, $host);
         preg_match('#\/[a-zA-z0-9]+\/[a-zA-z0-9]+.[a-z]{3,4}#', $url, $path);
-        if (count($scheme) != 0 && count($host) != 0 && count($path) != 0){
+        if (!empty($scheme) && !empty($host) && !empty($path)){
             echo '<p>Esquema: '.$scheme[0].'</p>';
             echo '<p>Host: '.$host[0].'</p>';
             echo '<p>Path: '.$path[0].'</p>';
