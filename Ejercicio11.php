@@ -9,10 +9,9 @@
 <body>
     <?php
         $string = 'Escuela Estech, Linares';
-        $newString = 'de Tecnologías';
-        $array = explode(' ', $string);
-        array_splice($array, 1, 0, $newString);
-        echo implode(' ', $array);
+        $position = strlen('Escuela');
+        $newString = substr_replace($string, ' de Tecnologías', $position, 0);
+        echo $newString;
     ?>
 </body>
 </html>

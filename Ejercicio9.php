@@ -11,7 +11,8 @@
         $url = 'www.dominio.com/htdocs/pagina.php';
         preg_match('#\/[a-zA-z0-9]*\.[a-z]{3,4}#', $url, $matches);
         if (!empty($matches)){
-            echo $matches[0];
+            $result = preg_replace('#\/#', '', $matches[0]);
+            echo $result;
         }
     ?>
 </body>

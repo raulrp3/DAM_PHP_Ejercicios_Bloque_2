@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php
-        $array = ['Uno' => 1, 'Tres' => 3, 'Cinco' => 5, 'Siete' => 7, 'Cero' => 0];
-        echo max($array);
+        $array = [1 => 'Uno', 3 => 'Tres', 5 => 'Cinco', 7 => 'Siete', 0 => 'Cero'];
+        echo max(array_keys($array));
     ?>
 </body>
 </html>
